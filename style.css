@@ -5,6 +5,8 @@
 }
 body{
     max-width:1200px;
+    background-color: black;
+    color: ghostwhite;
 }
 
 /* navgation styles */
@@ -145,8 +147,3 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
     background-color: #2D9CDB;
 }
 
-.btn-purchase {
-    display: block;
-    margin: 40px auto 80px auto;
-    font-size: 1.75em;
-}

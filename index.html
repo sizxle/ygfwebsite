@@ -18,7 +18,18 @@
     <body class="w3-content" >
 
         <!-- Sidebar/menu -->
-        <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+        <nav class="w3-bar-block w3-sidebar w3-black w3-collapse w3-top" style="width:250px;z-index: 2;" id="sideBar" >
+            <div class="w3-container w3-display-container w3-padding-16">
+                <i class="fa fa-remove w3-button w3-display-topright w3-hide-large" onclick="closeSideBar()"></i>
+                <img  src="img/ygfblk2.png" id="logo"/>
+            </div>
+            <div class="w3-padding-16 w3-large w3-text-white">
+                <a href="#" class="w3-bar-item w3-hover-white w3-button" id="homeBtn">HOME</a>
+                <a href="#" class="w3-bar-item w3-hover-white w3-button" id="apparelBtn">APPAREL</a>
+                <a href="#" class="w3-bar-item w3-hover-white w3-button" id="galleryBtn">GALLERY</a>
+            </div>
+        </nav>
+        <!-- <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
             <div class="w3-container w3-display-container w3-padding-16">
                 <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
                 <img class="w3-wide" src="img/ygf1.png" id="logo"> 
@@ -31,57 +42,61 @@
                 <a href="#" class="w3-bar-item w3-button">GALLERY</a>
 
             </div>
-        </nav>
+        </nav> -->
         <!-- Top menu on small screens -->
-        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+        <header class="w3-bar w3-top w3-hide-large w3-white w3-xlarge">
+            <div class="w3-bar-item w3-padding-24 ">
+                <img  src="img/ygf1.png" id="logo" />
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-right w3-padding-24 " onclick="openSideBar()"><i class="fa fa-bars"></i></a>
+        </header>
+        <!-- <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
             <div class="w3-bar-item w3-padding-24 w3-wide"><img class="w3-wide" src="img/ygfblk2.png" id="logo"> </div>
             <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-        </header>
+        </header> -->
         
         <!-- Overlay effect when opening sidebar on small screens -->
-        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+        <div id="sideBarOverlay" onclick="closeSideBar()" class="w3-overlay w3-hide-large"></div>
+        <!-- <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div> -->
          
+
 
         <!-- !PAGE CONTENT! -->
         <div class="w3-main" style="margin-left:250px">
              <!-- Push down content on small screens -->
-            <div class="w3-hide-large" style="margin-top:83px"></div>
-            
-            <!-- Top header -->
+            <div class="w3-hide-large" style="margin-top:100px"></div>
+
+             <!-- Top header -->
             <header class="w3-container w3-xlarge">
-                <p class="w3-left">HOME</p>
-                <p class="w3-right">
+                <div class="w3-left">HOME</div>
+                <div class="w3-right">
                 <i class="fa fa-shopping-cart w3-margin-right"></i>
                 <i class="fa fa-search"></i>
-                </p>
+                <div>
             </header>
-             <!-- Image header -->
-            <div class="w3-display-container w3-container">
-                <img src="img/BLACKTEXT.png" alt="2023nU" style="width:100%">
+            <!-- Image header -->
+            <div class="w3-container w3-display-container" >
+                <img src="img/BLACKTEXT.png" alt="2022Shirt" style="width:100%">
                 <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-                <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+                    <div><a href="#shopGrid" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></div>
                 </div>
             </div>
-
-            <div class="w3-container w3-text-grey" id="jeans">
+            <!-- number of items -->
+            <div class="w3-container w3-text-grey" id="shopGrid">
                 <p>2 items</p>
-            </div>
-
+            </div> 
             <!-- Product grid -->
-            <div class="w3-row w3-grayscale">
+            <div class="w3-row">
 
                 <div class="w3-col l3 s6">
-                    <div class="w3-container shop-item">
-                        <div class="w3-display-container">
-                            <img class="shop-item-image" src="img/BLACKTEXT.png" style="width:100%">
-                            <div class="w3-display-middle w3-display-hover">
-                                <button class="w3-button w3-black shop-item-button">Add to cart <i class="fa fa-shopping-cart"></i></button>
-                            </div>
+                    <div class="w3-display-container">
+                        <img  src="img/takeCareHoodie.PNG" style="width:100%">
+                        <div class="w3-display-middle w3-display-hover">
+                            <button class="w3-button w3-black shop-item-button">Add to cart <i class="fa fa-shopping-cart"></i></button>
                         </div>
-                        <p><div class="shop-item-title">TAKE CARE HOODIE</div><div class="shop-item-price">R300</div></p>
                     </div>
+                    <div class="shop-item-title">TAKE CARE HOODIE</div><div class="shop-item-price">R300</div>
                 </div>
-
                 <div class="w3-col l3 s6">
                     <div class="w3-container shop-item">
                         <div class="w3-display-container">
@@ -93,42 +108,46 @@
                         <p><div class="shop-item-title">TAKE CARE TEE</div><div class="shop-item-price">R200</div></p>
                     </div>
                 </div>
+                <div class="w3-col l3 s6">
+                    <div class="w3-container shop-item">
+                        <div class="w3-display-container">
+                            <img class="shop-item-image" src="img/FULL WHITE.png" style="width:100%">
+                            <div class="w3-display-middle w3-display-hover">
+                                <button class="w3-button w3-black shop-item-button">Add to cart <i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <p><div class="shop-item-title">TAKE CARE TEE</div><div class="shop-item-price">R200</div></p>
+                    </div>
+                </div> 
+                <div class="w3-col l3 s6">
+                    <div class="w3-container shop-item">
+                        <div class="w3-display-container">
+                            <img class="shop-item-image" src="img/new Shirt.png" style="width:100%">
+                            <div class="w3-display-middle w3-display-hover">
+                                <button class="w3-button w3-black shop-item-button">Add to cart <i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <p><div class="shop-item-title">DRAGON TEE</div><div class="shop-item-price">R200</div></p>
+                    </div>
+                </div> 
+
 
             </div>
 
-
-
-            <!-- Footer -->
-        <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
-            <div class="w3-row-padding">
-                <div class="w3-col s4">
-                    <h4>Contact</h4>
-                    <p>Questions? Go ahead.</p>
-                    <form action="" target="_blank">
-                    <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-                    <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-                    <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-                    <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-                    <button type="submit" class="w3-button w3-block w3-black">Send</button>
-                    </form>
+             <!-- Footer -->
+             <footer id="footer" class="w3-container w3-padding-24 w3-light-grey w3-large ">
+                <div class="w3-row-padding ">
+                    <div class="w3-col s6">
+                        <p> &copy;Copyright</p>
+                    </div>
+                    <div class="w3-col s6 w3-justify">
+                        <a href="#"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></i></a>
+                        <a href="#"><i class="fa fa-instagram w3-hover-opacity w3-large"></i></a>
+                        <a href="#"><i class="fa fa-twitter w3-hover-opacity w3-large"></i></a>
+                    </div>
                 </div>
-            
-                <div class="w3-col s4">
-                    <p> &copy;Copyright</p>
-                </div>
-            
-                <div class="w3-col s4 w3-justify">
-                    <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
-                    <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
-                    <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
-                </div>
-            </div>
-        </footer>
-
+             </footer>
         </div>
-     
-
-
     </body>
 
 </html>
