@@ -1,3 +1,15 @@
+/* global styles */
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    max-width:1200px;
+}
+
+/* navgation styles */
+
+
 #logo{
     width: 30%;
     height:30%;  
